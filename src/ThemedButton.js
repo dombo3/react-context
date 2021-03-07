@@ -4,7 +4,9 @@ import Button from "./Button";
 
 export default class ThemedButton extends React.Component {
   render() {
-    return <Button theme={this.context.theme} />;
+    let theme = this.context.theme;
+    let onClickHandler = this.context.toggleTheme;
+    return <Button theme={theme} onClick={onClickHandler} />;
   }
 }
 
